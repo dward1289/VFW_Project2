@@ -18,7 +18,7 @@
     <h1>Remind Me Later</h1>
 </header>
 
-<form action="#" method="post">
+<form id="taskForm" action="#" method="post">
 	<fieldset>
 		<legend>What's the Task?</legend>
 			<!--Info in the fieldset-->
@@ -59,12 +59,13 @@
 
 </form>
 
-
 <button id="submit">Submit</button> 
+<!--Add New Task Button-->
+<a href="additem.html"><button id="addOne" style="display: none;">Add New Task</button></a>
 
 <footer>
 <!--Tried using a href="#" , but it did not refresh page.-->
-<a href= "" id="clear">Clear Stored Data</a> <a href= "" id="displayData">Display Data</a>
+<a href= "#" id="clear">Clear Stored Data</a> <a href= "#" id="displayData">Display Data</a>
 </footer>
 <script type="text/javascript" src="main.js"></script>
 </body>

@@ -44,6 +44,26 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 	}
 	
+	var toggleContr = function (n) {
+		switch(n) {
+			case "on":
+				elId("taskForm").style.display = "none";
+				elId("clear").style.display = "inline";
+				elId("displayData").style.display = "none";
+				elId("addOne").style.display = "inline";
+				break;
+			case "off":
+				elId("form").style.display = "block";
+				elId("clear").style.display = "inline";
+				elId("displayData").style.display = "inline";
+				elId("addOne").style.display = "none";
+				elId("items").style.display = "none";
+				
+				break;
+			default:
+				return false;
+				}
+			}
 			
 	
 	//Store data function
@@ -68,6 +88,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	//Get data function
 	var getData = function () {
+		toggleContr("on");
 		//Write data from local storage to browser
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
