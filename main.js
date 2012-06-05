@@ -8,7 +8,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	}
 	//Create select field element and populate with options.
 	var makeDrop = function (){
-		var formTag = document.getElementsByTagName("form"); //fromTag is array
+		var formTag = document.getElementsByTagName("form"); //formTag is array
 		var selectList = elId("select");
 		var makeSelect = document.createElement("select");
 		makeSelect.setAttribute("id", "priorities");
@@ -89,6 +89,9 @@ window.addEventListener("DOMContentLoaded", function(){
 	//Get data function
 	var getData = function () {
 		toggleContr("on");
+		if(localStorage.length === 0) {
+			alert("There is no data in storage.");
+			}
 		//Write data from local storage to browser
 		var makeDiv = document.createElement("div");
 		makeDiv.setAttribute("id", "items");
@@ -113,6 +116,18 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	}
 	
+	var clearLocal = function () {
+		if(localStorage.length === 0){
+			alert("There is no data to clear.")
+		}
+		else{
+			localStorage.clear();
+			alert("All tasks have been cleared.");
+			window.location.reload();
+			return false;
+		}
+	
+	}
 	
 	//Variable defaults
 	var priorityGroup = ["High","Medium","Low"];
@@ -122,7 +137,7 @@ window.addEventListener("DOMContentLoaded", function(){
 	var displayLink = elId("displayData");
 	displayLink.addEventListener("click", getData);
 	var clearLink = elId("clear");
-	//clearLink.addEventListener("click", clearLocal);
+	clearLink.addEventListener("click", clearLocal);
 	var submit = elId("submit");
 	submit.addEventListener("click", storeData);
 	var categoryValue = "No";
