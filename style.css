@@ -1,0 +1,64 @@
+body{
+background:#FFFFFF url("http://i24.photobucket.com/albums/c39/youngbutcute07/notepad_page-2.png") no-repeat center;
+	}
+h1{
+	font-family:Tahoma, Geneva, sans-serif; serif;
+	text-align:center;
+	border-style:double;
+	border-color:#0000FF;
+	}
+h2{
+	font-family:Tahoma, Geneva, sans-serif; serif;
+	text-align:center;
+	padding-top:5px;
+	}
+p{
+	font-family:Tahoma, Geneva, sans-serif; serif;
+	padding-top:25px;
+	}
+	
+/*Name of Task*/
+ul.nOT{
+	font-family:Tahoma, Geneva, sans-serif;
+	}
+/*Category Checkboxes*/
+ul.checkBoxes{
+	
+	font-family:Tahoma, Geneva, sans-serif;
+    }
+    
+/*Date Selections*/    
+ul.dateSelects{
+	font-family:Tahoma, Geneva, sans-serif;
+	}
+	
+/*Priority Levels*/
+ul.pWord{
+	font-family:Tahoma, Geneva, sans-serif;
+	}
+	
+/*Alert Options 1-3 and Note*/
+ul.alertNote{
+	font-family:Tahoma, Geneva, sans-serif;
+	}
+	
+/*Notes*/	
+li.noteWord{
+	padding-top:10px;
+}
+li{
+	display:block;
+	}
+
+button{
+	font-family:Tahoma, Geneva, sans-serif;
+}
+legend.field{
+	font-family:Tahoma, Geneva, sans-serif; serif; 
+	}
+fieldset{
+	border-color:#ff0000;
+	}
+
+
+
